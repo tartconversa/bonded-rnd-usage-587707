@@ -1,0 +1,6 @@
+move_id,pack_id,action,from_holder,to_holder,at
+MV1,P1,issue,store,A,2026-10-10T08:00:00+08:00
+MV2,P1B,transfer,A,B,2026-10-15T08:00:00+08:00
+MV3,P1,return,A,store,2026-10-18T08:00:00+08:00
+MV4,P2,issue,store,B,2026-10-20T08:00:00+08:00
+MV5,P3,issue,store,C,2026-10-14T08:00:00+08:00

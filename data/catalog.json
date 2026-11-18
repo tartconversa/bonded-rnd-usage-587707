@@ -1,0 +1,447 @@
+{
+  "title": "保税研发材料的双计量耗用仓",
+  "synthetic": true,
+  "tables": [
+    {
+      "name": "materials",
+      "description": "物质及成本。",
+      "columns": [
+        {
+          "name": "material_id",
+          "type": "string",
+          "description": "物质",
+          "nullable": true
+        },
+        {
+          "name": "yuan_per_g",
+          "type": "number",
+          "description": "元每克",
+          "nullable": true
+        }
+      ],
+      "key": [
+        "material_id"
+      ],
+      "references": [],
+      "path": "data/materials.csv",
+      "row_count": 2,
+      "sha256": "ede5e45eea9ebf2d83ad444d9be682482b7502327c7ea3b808958ded0ad7ea4a"
+    },
+    {
+      "name": "specifications",
+      "description": "历史包装规格。",
+      "columns": [
+        {
+          "name": "spec_id",
+          "type": "string",
+          "description": "规格",
+          "nullable": true
+        },
+        {
+          "name": "material_id",
+          "type": "string",
+          "description": "物质",
+          "nullable": true
+        },
+        {
+          "name": "start",
+          "type": "date",
+          "description": "起",
+          "nullable": true
+        },
+        {
+          "name": "end",
+          "type": "date",
+          "description": "止",
+          "nullable": true
+        },
+        {
+          "name": "nominal_g",
+          "type": "number",
+          "description": "封装净克",
+          "nullable": true
+        }
+      ],
+      "key": [
+        "spec_id"
+      ],
+      "references": [
+        {
+          "column": "material_id",
+          "target_table": "materials",
+          "target_column": "material_id"
+        }
+      ],
+      "path": "data/specifications.csv",
+      "row_count": 3,
+      "sha256": "8a7d5ef8fbe7254f3bd8a4c837034db10cebc9a21c6629f850e66250cb9165e1"
+    },
+    {
+      "name": "packs",
+      "description": "实收根包装，不包括分装子管。",
+      "columns": [
+        {
+          "name": "pack_id",
+          "type": "string",
+          "description": "包装",
+          "nullable": true
+        },
+        {
+          "name": "material_id",
+          "type": "string",
+          "description": "物质",
+          "nullable": true
+        },
+        {
+          "name": "packaged_at",
+          "type": "date",
+          "description": "封装日",
+          "nullable": true
+        },
+        {
+          "name": "received_at",
+          "type": "datetime",
+          "description": "入区",
+          "nullable": true
+        },
+        {
+          "name": "count",
+          "type": "integer",
+          "description": "瓶数",
+          "nullable": true
+        },
+        {
+          "name": "net_g",
+          "type": "number",
+          "description": "实收净克",
+          "nullable": true
+        }
+      ],
+      "key": [
+        "pack_id"
+      ],
+      "references": [
+        {
+          "column": "material_id",
+          "target_table": "materials",
+          "target_column": "material_id"
+        }
+      ],
+      "path": "data/packs.csv",
+      "row_count": 3,
+      "sha256": "a95922a85fe92025a1e81679d49d94b351846a9f32e909fd2225f0901b2b43a6"
+    },
+    {
+      "name": "density",
+      "description": "实测适用条件。",
+      "columns": [
+        {
+          "name": "density_id",
+          "type": "string",
+          "description": "密度",
+          "nullable": true
+        },
+        {
+          "name": "material_id",
+          "type": "string",
+          "description": "物质",
+          "nullable": true
+        },
+        {
+          "name": "start",
+          "type": "date",
+          "description": "起",
+          "nullable": true
+        },
+        {
+          "name": "end",
+          "type": "date",
+          "description": "止",
+          "nullable": true
+        },
+        {
+          "name": "temperature_c",
+          "type": "number",
+          "description": "温度",
+          "nullable": true
+        },
+        {
+          "name": "g_per_ml",
+          "type": "number",
+          "description": "克每毫升",
+          "nullable": true
+        }
+      ],
+      "key": [
+        "density_id"
+      ],
+      "references": [
+        {
+          "column": "material_id",
+          "target_table": "materials",
+          "target_column": "material_id"
+        }
+      ],
+      "path": "data/density.csv",
+      "row_count": 2,
+      "sha256": "d474ba7b4b84473d13d2e7e0cfef84626d74c947f0ead82836ce46a383c88931"
+    },
+    {
+      "name": "decants",
+      "description": "分装保留父包装。",
+      "columns": [
+        {
+          "name": "decant_id",
+          "type": "string",
+          "description": "分装",
+          "nullable": true
+        },
+        {
+          "name": "parent_pack",
+          "type": "string",
+          "description": "父容器",
+          "nullable": true
+        },
+        {
+          "name": "child_pack",
+          "type": "string",
+          "description": "子容器",
+          "nullable": true
+        },
+        {
+          "name": "at",
+          "type": "datetime",
+          "description": "时点",
+          "nullable": true
+        },
+        {
+          "name": "quantity",
+          "type": "number",
+          "description": "量",
+          "nullable": true
+        },
+        {
+          "name": "unit",
+          "type": "string",
+          "description": "g或ml",
+          "nullable": true
+        },
+        {
+          "name": "temperature_c",
+          "type": "number",
+          "description": "温度",
+          "nullable": true
+        }
+      ],
+      "key": [
+        "decant_id"
+      ],
+      "references": [],
+      "path": "data/decants.csv",
+      "row_count": 3,
+      "sha256": "f0d5149cb127d2c0c2287105b985bfbac11c1306aaab0049b04c1190d5316ba7"
+    },
+    {
+      "name": "movements",
+      "description": "容器保管转移。",
+      "columns": [
+        {
+          "name": "move_id",
+          "type": "string",
+          "description": "动作",
+          "nullable": true
+        },
+        {
+          "name": "pack_id",
+          "type": "string",
+          "description": "容器",
+          "nullable": true
+        },
+        {
+          "name": "action",
+          "type": "string",
+          "description": "issue或return或transfer",
+          "nullable": true
+        },
+        {
+          "name": "from_holder",
+          "type": "string",
+          "description": "来源",
+          "nullable": true
+        },
+        {
+          "name": "to_holder",
+          "type": "string",
+          "description": "去向",
+          "nullable": true
+        },
+        {
+          "name": "at",
+          "type": "datetime",
+          "description": "时点",
+          "nullable": true
+        }
+      ],
+      "key": [
+        "move_id"
+      ],
+      "references": [],
+      "path": "data/movements.csv",
+      "row_count": 5,
+      "sha256": "da568f84dacd035c3232c89e1b9148c8fc944bb3ab82b28d081b039480ec4919"
+    },
+    {
+      "name": "uses",
+      "description": "消耗及处置。",
+      "columns": [
+        {
+          "name": "use_id",
+          "type": "string",
+          "description": "去向",
+          "nullable": true
+        },
+        {
+          "name": "pack_id",
+          "type": "string",
+          "description": "容器",
+          "nullable": true
+        },
+        {
+          "name": "project",
+          "type": "string",
+          "description": "项目",
+          "nullable": true
+        },
+        {
+          "name": "kind",
+          "type": "string",
+          "description": "use或evaporate或destroy",
+          "nullable": true
+        },
+        {
+          "name": "quantity",
+          "type": "number",
+          "description": "量",
+          "nullable": true
+        },
+        {
+          "name": "unit",
+          "type": "string",
+          "description": "g或ml",
+          "nullable": true
+        },
+        {
+          "name": "temperature_c",
+          "type": "number",
+          "description": "温度",
+          "nullable": true
+        },
+        {
+          "name": "at",
+          "type": "datetime",
+          "description": "实际",
+          "nullable": true
+        },
+        {
+          "name": "evidence",
+          "type": "string",
+          "description": "证据状态",
+          "nullable": true
+        },
+        {
+          "name": "handover_period",
+          "type": "string",
+          "description": "交接期",
+          "nullable": true
+        }
+      ],
+      "key": [
+        "use_id"
+      ],
+      "references": [],
+      "path": "data/uses.csv",
+      "row_count": 6,
+      "sha256": "91aee31b9839f2feb4a79c1c76dd6003c47e51724aaf2a7887839f03dedd0c41"
+    },
+    {
+      "name": "weighings",
+      "description": "独立称量不是配平。",
+      "columns": [
+        {
+          "name": "weigh_id",
+          "type": "string",
+          "description": "称量",
+          "nullable": true
+        },
+        {
+          "name": "pack_id",
+          "type": "string",
+          "description": "容器",
+          "nullable": true
+        },
+        {
+          "name": "at",
+          "type": "datetime",
+          "description": "时点",
+          "nullable": true
+        },
+        {
+          "name": "remaining_g",
+          "type": "number",
+          "description": "实测余克",
+          "nullable": true
+        }
+      ],
+      "key": [
+        "weigh_id"
+      ],
+      "references": [],
+      "path": "data/weighings.csv",
+      "row_count": 4,
+      "sha256": "eaa38ed2cc7813b5c747a663c58499177691a6ee4baae5f77b0f22e959717800"
+    },
+    {
+      "name": "density_corrections",
+      "description": "后续密度补正。",
+      "columns": [
+        {
+          "name": "correction_id",
+          "type": "string",
+          "description": "补正",
+          "nullable": true
+        },
+        {
+          "name": "density_id",
+          "type": "string",
+          "description": "目标",
+          "nullable": true
+        },
+        {
+          "name": "g_per_ml",
+          "type": "number",
+          "description": "新密度",
+          "nullable": true
+        },
+        {
+          "name": "received_at",
+          "type": "datetime",
+          "description": "收到",
+          "nullable": true
+        }
+      ],
+      "key": [
+        "correction_id"
+      ],
+      "references": [
+        {
+          "column": "density_id",
+          "target_table": "density",
+          "target_column": "density_id"
+        }
+      ],
+      "path": "data/density_corrections.csv",
+      "row_count": 1,
+      "sha256": "99aa1c2d685dc988433bbf5f619efd9a711595cfca6aa5873fbebc7af88a7962"
+    }
+  ]
+}
