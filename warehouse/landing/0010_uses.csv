@@ -1,0 +1,2 @@
+use_id,pack_id,project,kind,quantity,unit,temperature_c,at,evidence,handover_period
+U7,P1B,B,use,4,g,20,2026-11-02T09:00:00+08:00,confirmed,2026-11

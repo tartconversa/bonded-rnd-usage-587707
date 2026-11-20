@@ -1,0 +1,4 @@
+decant_id,parent_pack,child_pack,at,quantity,unit,temperature_c
+DC1,P1,P1A,2026-10-14T08:00:00+08:00,30,g,20
+DC2,P1,P1B,2026-10-14T08:00:00+08:00,20,g,20
+DC3,P3,P3A,2026-10-15T08:00:00+08:00,10,ml,25

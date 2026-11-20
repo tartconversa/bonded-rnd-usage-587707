@@ -1,0 +1,17 @@
+{
+  "period": "2026-11",
+  "versions": [
+    {
+      "version": "v1",
+      "hash": "50b590037c26127bee23fe9969bcb89511e0feea87b33f405697c2e1256b97bb",
+      "confirmed": true,
+      "cutoff": "2026-11-01T09:00:00+08:00"
+    },
+    {
+      "version": "v2",
+      "hash": "864a550394fbbe1c74794af4de3e7852bab919664993cc01c9b242222c2bfb8a",
+      "confirmed": true,
+      "cutoff": "2026-11-04T09:00:00+08:00"
+    }
+  ]
+}

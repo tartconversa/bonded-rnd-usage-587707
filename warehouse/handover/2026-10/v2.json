@@ -1,0 +1,271 @@
+{
+  "period": "2026-10",
+  "cutoff": "2026-10-31T23:59:59+08:00",
+  "content": {
+    "confirmed_lines": [
+      {
+        "use_id": "U1",
+        "project": "A",
+        "kind": "use",
+        "evidence": "confirmed",
+        "grams": "20",
+        "yuan": "80.00",
+        "cost_period": "2026-10",
+        "status": "确认",
+        "reason": "",
+        "deps": [
+          "materials:M1",
+          "packs:P1",
+          "uses:U1"
+        ]
+      },
+      {
+        "use_id": "U2",
+        "project": "A",
+        "kind": "use",
+        "evidence": "confirmed",
+        "grams": "10.60",
+        "yuan": "42.40",
+        "cost_period": "2026-10",
+        "status": "确认",
+        "reason": "",
+        "deps": [
+          "decants:DC1",
+          "density:D2",
+          "density_corrections:DX1",
+          "materials:M1",
+          "uses:U2"
+        ]
+      },
+      {
+        "use_id": "U4",
+        "project": "B",
+        "kind": "evaporate",
+        "evidence": "documented",
+        "grams": "0.1",
+        "yuan": "0.40",
+        "cost_period": "2026-10",
+        "status": "确认",
+        "reason": "",
+        "deps": [
+          "materials:M1",
+          "packs:P2",
+          "uses:U4"
+        ]
+      }
+    ],
+    "pending_lines": [
+      {
+        "use_id": "U5",
+        "project": "C",
+        "kind": "use",
+        "evidence": "confirmed",
+        "grams": null,
+        "yuan": null,
+        "cost_period": "2026-10",
+        "status": "待核",
+        "reason": "无适用密度，质量未知",
+        "deps": [
+          "decants:DC3",
+          "materials:M2",
+          "uses:U5"
+        ]
+      },
+      {
+        "use_id": "U6",
+        "project": "B",
+        "kind": "destroy",
+        "evidence": "pending",
+        "grams": "10",
+        "yuan": "40.00",
+        "cost_period": "2026-10",
+        "status": "待核",
+        "reason": "处置申报未确证",
+        "deps": [
+          "materials:M1",
+          "packs:P2",
+          "uses:U6"
+        ]
+      }
+    ],
+    "mass_discrepancies": [
+      {
+        "pack_id": "P2",
+        "material_id": "M1",
+        "holder": "B",
+        "book_g": "119.9",
+        "pending_out_g": "10",
+        "expected_g": "109.9",
+        "measured_g": "109.9",
+        "diff_g": "0.0",
+        "recon_status": "ok",
+        "deps": [
+          "materials:M1",
+          "packs:P2",
+          "specifications:SP2",
+          "uses:U4",
+          "uses:U6",
+          "weighings:W4"
+        ]
+      },
+      {
+        "pack_id": "P3",
+        "material_id": "M2",
+        "holder": "C",
+        "book_g": null,
+        "pending_out_g": "0",
+        "expected_g": null,
+        "measured_g": null,
+        "diff_g": null,
+        "recon_status": "unknown",
+        "deps": [
+          "decants:DC3",
+          "materials:M2",
+          "packs:P3",
+          "specifications:SP3"
+        ]
+      },
+      {
+        "pack_id": "P3A",
+        "material_id": "M2",
+        "holder": "C",
+        "book_g": null,
+        "pending_out_g": "0",
+        "expected_g": null,
+        "measured_g": null,
+        "diff_g": null,
+        "recon_status": "unknown",
+        "deps": [
+          "decants:DC3",
+          "materials:M2",
+          "packs:P3",
+          "uses:U5"
+        ]
+      }
+    ],
+    "open_pendings": [
+      {
+        "pending_id": "PEND-DC3",
+        "topic": "分装规格不明",
+        "reason": "M2 在 2026-10-15、25°C 无适用密度，10 ml 不能折算为克",
+        "needed": "补适用密度资料",
+        "affects": [
+          "M2质量守恒",
+          "容器P3A期初",
+          "容器P3余量"
+        ],
+        "refs": [
+          "decants:DC3",
+          "packs:P3"
+        ]
+      },
+      {
+        "pending_id": "PEND-U5-G",
+        "topic": "消耗质量未知",
+        "reason": "M2 无适用密度，3 ml 不能折算为克，成本与核销金额未定",
+        "needed": "补适用密度资料",
+        "affects": [
+          "M2质量守恒",
+          "核销期2026-10",
+          "项目C成本"
+        ],
+        "refs": [
+          "decants:DC3",
+          "materials:M2",
+          "uses:U5"
+        ]
+      },
+      {
+        "pending_id": "PEND-U6",
+        "topic": "处置申报未确证",
+        "reason": "P2 申报 destroy 10 g，证据状态 pending，不具确认资格；该量既不计确认损耗也不计可用余量",
+        "needed": "补见证或确证资料",
+        "affects": [
+          "容器P2余量",
+          "核销期2026-10",
+          "项目B成本"
+        ],
+        "refs": [
+          "materials:M1",
+          "packs:P2",
+          "uses:U6"
+        ]
+      },
+      {
+        "pending_id": "PEND-P3-REM",
+        "topic": "容器余量未知",
+        "reason": "M2 存在未知环节，P3 账面余量不能确定",
+        "needed": "补适用密度或规格资料",
+        "affects": [
+          "M2质量守恒",
+          "容器P3余量"
+        ],
+        "refs": [
+          "materials:M2",
+          "packs:P3",
+          "specifications:SP3"
+        ]
+      },
+      {
+        "pending_id": "PEND-P3A-REM",
+        "topic": "容器余量未知",
+        "reason": "M2 存在未知环节，P3A 账面余量不能确定",
+        "needed": "补适用密度或规格资料",
+        "affects": [
+          "M2质量守恒",
+          "容器P3A余量"
+        ],
+        "refs": [
+          "decants:DC3",
+          "packs:P3"
+        ]
+      }
+    ],
+    "totals": {
+      "grams": "30.70",
+      "yuan": "122.80",
+      "by_project": {
+        "A": {
+          "grams": "30.60",
+          "yuan": "122.40"
+        },
+        "B": {
+          "grams": "0.1",
+          "yuan": "0.40"
+        }
+      }
+    }
+  },
+  "inputs": {
+    "materials:M1": "97d9698bfccc3969",
+    "materials:M2": "00caec62e53775c1",
+    "specifications:SP1": "ac6c1aa107b911d8",
+    "specifications:SP2": "943d86981a48d229",
+    "specifications:SP3": "f9cbfc22171fe7fb",
+    "packs:P1": "df7f71473b2e5ed1",
+    "packs:P2": "c2a4a416e2305e8c",
+    "packs:P3": "0206a3b677cfe111",
+    "density:D1": "2450af0b5f7fbfb4",
+    "density:D2": "6c7ad0a600d29499",
+    "decants:DC1": "7b5e524bb15fbc24",
+    "decants:DC2": "0905d950896aac67",
+    "decants:DC3": "0f6b5b9a7dabb43a",
+    "movements:MV1": "11c2fa92ee1f115f",
+    "movements:MV2": "3f109be0b11af27b",
+    "movements:MV3": "492cc1d7690decff",
+    "movements:MV4": "dde9b340babd0c13",
+    "movements:MV5": "237d6e3b485f7eb5",
+    "uses:U1": "09021605f6f68b2d",
+    "uses:U2": "945fd67d330485ec",
+    "uses:U3": "46b64a81df8dd932",
+    "uses:U4": "3d5e149c893950b3",
+    "uses:U5": "ffe47bdd72d507e4",
+    "uses:U6": "4d4a4b792e47eaa7",
+    "weighings:W1": "a4f01f83aa3e7eb4",
+    "weighings:W2": "205a4fed9ed57712",
+    "weighings:W3": "dc9365943644d061",
+    "weighings:W4": "d816429f4f483d2f",
+    "density_corrections:DX1": "df8531c68e948ec2"
+  },
+  "content_hash": "97c2675e2cf4b4f6088282b848774e151ae71180c9e97defadcf2317f5460388"
+}

@@ -1,0 +1,7 @@
+pack_id,material_id,container_kind,parent_pack,spec_id,nominal_g,holder,start_g,confirmed_out_g,pending_out_g,book_g,expected_g,measured_g,diff_g,recon_status,deps
+P1,M1,root,,SP1,100,store,100,70,0,30,30,30,0,ok,decants:DC1;decants:DC2;materials:M1;packs:P1;specifications:SP1;uses:U1;weighings:W1
+P1A,M1,child,P1,,,A,30,10.60,0,19.40,19.40,19.2,-0.20,ok,decants:DC1;density:D2;density_corrections:DX1;materials:M1;packs:P1;uses:U2;weighings:W2
+P1B,M1,child,P1,,,B,20,9,0,11,11,11,0,ok,decants:DC2;materials:M1;packs:P1;uses:U3;uses:U7;weighings:W3;weighings:W5
+P2,M1,root,,SP2,120,B,120,0.1,10,119.9,109.9,109.9,0.0,ok,materials:M1;packs:P2;specifications:SP2;uses:U4;uses:U6;weighings:W4
+P3,M2,root,,SP3,50,C,50,0,0,,,,,unknown,decants:DC3;materials:M2;packs:P3;specifications:SP3
+P3A,M2,child,P3,,,C,,0,0,,,,,unknown,decants:DC3;materials:M2;packs:P3;uses:U5

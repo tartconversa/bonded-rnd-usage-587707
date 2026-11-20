@@ -1,0 +1,142 @@
+{
+  "mass": [
+    {
+      "material_id": "M1",
+      "received_g": "220",
+      "confirmed_out_g": "39.70",
+      "pending_out_g": "10",
+      "measured_g": "170.1",
+      "residual_g": "0.20",
+      "unknown_containers": [],
+      "containers": [
+        {
+          "pack_id": "P1",
+          "book_g": "30",
+          "pending_g": "0",
+          "expected_g": "30",
+          "measured_g": "30",
+          "diff_g": "0",
+          "status": "ok"
+        },
+        {
+          "pack_id": "P1A",
+          "book_g": "19.40",
+          "pending_g": "0",
+          "expected_g": "19.40",
+          "measured_g": "19.2",
+          "diff_g": "-0.20",
+          "status": "ok"
+        },
+        {
+          "pack_id": "P1B",
+          "book_g": "11",
+          "pending_g": "0",
+          "expected_g": "11",
+          "measured_g": "11",
+          "diff_g": "0",
+          "status": "ok"
+        },
+        {
+          "pack_id": "P2",
+          "book_g": "119.9",
+          "pending_g": "10",
+          "expected_g": "109.9",
+          "measured_g": "109.9",
+          "diff_g": "0.0",
+          "status": "ok"
+        }
+      ]
+    },
+    {
+      "material_id": "M2",
+      "received_g": "50",
+      "confirmed_out_g": "0",
+      "pending_out_g": "0",
+      "measured_g": "0",
+      "residual_g": null,
+      "unknown_containers": [
+        "P3",
+        "P3A"
+      ],
+      "containers": [
+        {
+          "pack_id": "P3",
+          "book_g": null,
+          "pending_g": "0",
+          "expected_g": null,
+          "measured_g": null,
+          "diff_g": null,
+          "status": "unknown"
+        },
+        {
+          "pack_id": "P3A",
+          "book_g": null,
+          "pending_g": "0",
+          "expected_g": null,
+          "measured_g": null,
+          "diff_g": null,
+          "status": "unknown"
+        }
+      ]
+    }
+  ],
+  "count": {
+    "received_bottles": 3,
+    "destroyed_bottles": 0,
+    "current_bottles": 3,
+    "empty_packages": 3,
+    "conserved": true
+  },
+  "cost_writeoff": {
+    "cost_total_yuan": "158.80",
+    "writeoff_confirmed_yuan": "158.80",
+    "unknown_cost_lines": [
+      "U5"
+    ],
+    "bridge": [
+      {
+        "use_id": "U1",
+        "project": "A",
+        "cost_period": "2026-10",
+        "handover_period": "2026-10",
+        "grams": "20",
+        "yuan": "80.00"
+      },
+      {
+        "use_id": "U2",
+        "project": "A",
+        "cost_period": "2026-10",
+        "handover_period": "2026-10",
+        "grams": "10.60",
+        "yuan": "42.40"
+      },
+      {
+        "use_id": "U3",
+        "project": "B",
+        "cost_period": "2026-10",
+        "handover_period": "2026-11",
+        "grams": "5",
+        "yuan": "20.00"
+      },
+      {
+        "use_id": "U4",
+        "project": "B",
+        "cost_period": "2026-10",
+        "handover_period": "2026-10",
+        "grams": "0.1",
+        "yuan": "0.40"
+      },
+      {
+        "use_id": "U7",
+        "project": "B",
+        "cost_period": "2026-11",
+        "handover_period": "2026-11",
+        "grams": "4",
+        "yuan": "16.00"
+      }
+    ]
+  },
+  "holder_expected_g": {
+    "M1": "170.30"
+  }
+}

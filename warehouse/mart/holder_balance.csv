@@ -1,0 +1,5 @@
+holder,material_id,containers,expected_g,pending_g,unknown_containers
+A,M1,1,19.40,0,0
+B,M1,2,120.9,10,0
+C,M2,2,0,0,2
+store,M1,1,30,0,0

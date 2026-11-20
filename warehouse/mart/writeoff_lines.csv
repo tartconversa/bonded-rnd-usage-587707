@@ -1,0 +1,8 @@
+handover_period,use_id,project,kind,evidence,grams,yuan,cost_period,status,reason,deps
+2026-10,U1,A,use,confirmed,20,80.00,2026-10,确认,,materials:M1;packs:P1;uses:U1
+2026-10,U2,A,use,confirmed,10.60,42.40,2026-10,确认,,decants:DC1;density:D2;density_corrections:DX1;materials:M1;uses:U2
+2026-10,U4,B,evaporate,documented,0.1,0.40,2026-10,确认,,materials:M1;packs:P2;uses:U4
+2026-10,U5,C,use,confirmed,,,2026-10,待核,无适用密度，质量未知,decants:DC3;materials:M2;uses:U5
+2026-10,U6,B,destroy,pending,10,40.00,2026-10,待核,处置申报未确证,materials:M1;packs:P2;uses:U6
+2026-11,U3,B,use,confirmed,5,20.00,2026-10,确认,,decants:DC2;materials:M1;uses:U3
+2026-11,U7,B,use,confirmed,4,16.00,2026-11,确认,,decants:DC2;materials:M1;uses:U7

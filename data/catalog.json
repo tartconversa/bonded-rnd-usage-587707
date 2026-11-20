@@ -25,7 +25,7 @@
       "references": [],
       "path": "data/materials.csv",
       "row_count": 2,
-      "sha256": "ede5e45eea9ebf2d83ad444d9be682482b7502327c7ea3b808958ded0ad7ea4a"
+      "sha256": "54d9821c9fca4a76ad48411b3a5e42c440e2acde1750e3a27374a415cc4f374e"
     },
     {
       "name": "specifications",
@@ -74,7 +74,7 @@
       ],
       "path": "data/specifications.csv",
       "row_count": 3,
-      "sha256": "8a7d5ef8fbe7254f3bd8a4c837034db10cebc9a21c6629f850e66250cb9165e1"
+      "sha256": "b161d72dea2b64817b1528367c90840a5b1b6e5bb6b16e759a28653ca75e6dde"
     },
     {
       "name": "packs",
@@ -129,7 +129,7 @@
       ],
       "path": "data/packs.csv",
       "row_count": 3,
-      "sha256": "a95922a85fe92025a1e81679d49d94b351846a9f32e909fd2225f0901b2b43a6"
+      "sha256": "0365c795856c4f04b319ca66f6dd46a63660405021cd03aa58398c7d97e20f39"
     },
     {
       "name": "density",
@@ -184,7 +184,7 @@
       ],
       "path": "data/density.csv",
       "row_count": 2,
-      "sha256": "d474ba7b4b84473d13d2e7e0cfef84626d74c947f0ead82836ce46a383c88931"
+      "sha256": "4228c84928ffe35e80d3a71c885c7b79397e756ef99c91c678b99a553f4abeae"
     },
     {
       "name": "decants",
@@ -239,7 +239,7 @@
       "references": [],
       "path": "data/decants.csv",
       "row_count": 3,
-      "sha256": "f0d5149cb127d2c0c2287105b985bfbac11c1306aaab0049b04c1190d5316ba7"
+      "sha256": "9fe721933875f2d1e17c7f7edc518fa05fa3683f97a58745da9419acff85f354"
     },
     {
       "name": "movements",
@@ -288,7 +288,7 @@
       "references": [],
       "path": "data/movements.csv",
       "row_count": 5,
-      "sha256": "da568f84dacd035c3232c89e1b9148c8fc944bb3ab82b28d081b039480ec4919"
+      "sha256": "ae9ac6582ab92b8d8583a5509771bb0024ab4dfe8642d6bfb7909406e6a61ac4"
     },
     {
       "name": "uses",
@@ -361,7 +361,7 @@
       "references": [],
       "path": "data/uses.csv",
       "row_count": 6,
-      "sha256": "91aee31b9839f2feb4a79c1c76dd6003c47e51724aaf2a7887839f03dedd0c41"
+      "sha256": "2cc3ed52293cb60643b2db5757b39c18fb93ccfe628805fd5738b583ab18cb71"
     },
     {
       "name": "weighings",
@@ -398,7 +398,7 @@
       "references": [],
       "path": "data/weighings.csv",
       "row_count": 4,
-      "sha256": "eaa38ed2cc7813b5c747a663c58499177691a6ee4baae5f77b0f22e959717800"
+      "sha256": "75337c619f276c8d1e8eee0bd96d638bb7c1f82b4d091f45cb877ecaaa2214e2"
     },
     {
       "name": "density_corrections",
@@ -441,7 +441,7 @@
       ],
       "path": "data/density_corrections.csv",
       "row_count": 1,
-      "sha256": "99aa1c2d685dc988433bbf5f619efd9a711595cfca6aa5873fbebc7af88a7962"
+      "sha256": "c63d98d46f7b0667d7639f5ad389645dd2addf1a3c68182dbd90a530886bffea"
     }
   ]
 }

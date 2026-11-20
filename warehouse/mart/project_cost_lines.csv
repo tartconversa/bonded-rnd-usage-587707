@@ -1,0 +1,7 @@
+project,cost_period,use_id,pack_id,kind,grams,yuan_per_g,yuan_exact,yuan,handover_period,status,deps
+A,2026-10,U1,P1,use,20,4,80,80.00,2026-10,确认,materials:M1;packs:P1;uses:U1
+A,2026-10,U2,P1A,use,10.60,4,42.40,42.40,2026-10,确认,decants:DC1;density:D2;density_corrections:DX1;materials:M1;uses:U2
+B,2026-10,U3,P1B,use,5,4,20,20.00,2026-11,确认,decants:DC2;materials:M1;uses:U3
+C,2026-10,U5,P3A,use,,6,,,2026-10,待核,decants:DC3;materials:M2;uses:U5
+B,2026-10,U4,P2,evaporate,0.1,4,0.4,0.40,2026-10,确认,materials:M1;packs:P2;uses:U4
+B,2026-11,U7,P1B,use,4,4,16,16.00,2026-11,确认,decants:DC2;materials:M1;uses:U7
